@@ -1,0 +1,21 @@
+
+.container {
+  text-align: center;
+}
+
+.title_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swarm {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+}
+
+.swarm ul {
+  list-style-type: none;
+  padding: 0;
+}

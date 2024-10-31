@@ -1,0 +1,9 @@
+<mat-card>
+  <mat-card-title>{{ type }}</mat-card-title>
+  <mat-list>
+    <mat-list-item *ngFor="let bee of bees">
+      <span mat-line><mat-label>{{ bee.type }}</mat-label></span>
+      <span mat-line><mat-label>{{ bee.hp }}HP</mat-label></span>
+    </mat-list-item>
+  </mat-list>
+</mat-card>

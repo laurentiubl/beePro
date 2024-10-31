@@ -1,0 +1,34 @@
+<div class="container">
+  <mat-card appearance="outlined" class="title_center">
+    <mat-card-content>
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>Bee Game</mat-card-title>
+          <mat-card-subtitle> Player: {{player}}</mat-card-subtitle>
+        </mat-card-title-group>
+      </mat-card-header>
+    </mat-card-content>
+  </mat-card>
+<br>
+  <div *ngIf="!beeService.gameOver; else templateGameOv">
+    <button style="margin: 10px" mat-flat-button   color="primary"  (click)="hitClick()">Hit button</button>
+
+    <mat-card *ngIf="recentHit" appearance="outlined">
+      <mat-card-content> Hit a {{ recentHit.type }} for {{ recentHit.damage }} damage</mat-card-content>
+    </mat-card>
+
+
+    <div class="swarm">
+      <div *ngFor="let type of typesArr">
+
+        <app-bee-type [type]="type" [bees]="swarm | filterByType: type"></app-bee-type>
+
+      </div>
+    </div>
+  </div>
+
+  <ng-template #templateGameOv>
+    <p>Game Over</p>
+    <button  mat-flat-button (click)="startGame()"  color="primary" >Restart</button>
+  </ng-template>
+</div>
