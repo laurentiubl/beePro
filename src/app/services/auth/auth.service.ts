@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {MOCK_PLAYERS, Player} from "../mock/mock-players";
+import {MOCK_PLAYERS, Player} from "../../mock/mock-players";
 import {delay, map, Observable, of} from "rxjs";
 
 @Injectable({
